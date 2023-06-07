@@ -244,8 +244,8 @@ section .title::after{
 
 #typed-text {
   border-right: 0.15em solid orange;
-  animation: typing 20s steps(40, end),
-    blink-caret 0.75s steps(40, end) infinite;  
+  animation: typing 20s steps(9, end),
+    blink-caret 0.75s steps(9, end) infinite;  
 }
 
 /* .p::after{
@@ -573,8 +573,14 @@ section .title::after{
     background: #111;
     color: #fff;
 }
-
-.teams .carousel .card{
+.teams .card1{
+ display: flex;
+ justify-content: center;
+ gap: 5%;
+ flex-wrap: wrap;
+ 
+}
+.teams .card1 .card{
     background: #222;
     border-radius: 6px;
     padding: 25px 35px;
@@ -582,26 +588,28 @@ section .title::after{
     overflow: hidden;
     margin-left: 20px;
     transition: all 0.3s ease;
+    width: 300px;
+    margin-top: 5%;
 }
-.teams .carousel .card:hover{
+.teams .card1 .card:hover{
     background: crimson;
 }
-.teams .carousel .card .box{
+.teams .card1 .card .box{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
 }
-.teams .carousel .card:hover .box{
+.teams .card1 .card:hover .box{
     transform: scale(1.05);
 }
-.teams .carousel .card .text{
+.teams .card1 .card .text{
     font-size: 25px;
     font-weight: 500;
     margin: 10px 0 7px 0;
 }
-.teams .carousel .card img{
+.teams .card1 .card img{
     height: 150px;
     width: 150px;
     object-fit: cover;
@@ -609,7 +617,7 @@ section .title::after{
     border: 5px solid crimson;
     transition: all 0.3s ease;
 }
-.teams .carousel .card:hover img{
+.teams .card1 .card:hover img{
     border-color: #fff;
 }
 .owl-dots{
