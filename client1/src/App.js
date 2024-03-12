@@ -42,63 +42,20 @@ function App() {
         $(".menu-btn i").toggleClass("active");
       });
 
-  
 
     })
-  
-
-
-
-
 
   const [data, setData] = useState([]);
-  // const texts = ["Developer"];
-  // let index = 0;
-  // let textIndex = 0;
-
-  // function typeText() {
-  //   if (index < texts[textIndex].length) {
-  //     document.getElementById("typed-text").textContent +=
-  //       texts[textIndex].charAt(index);
-  //     index++;
-  //     setTimeout(typeText, 150);
-  //   } else {
-  //     setTimeout(deleteText, 1000);
-  //   }
-  // }
-
-  // function deleteText() {
-  //   if (index >= 0) {
-  //     let typedText = document.getElementById("typed-text").textContent;
-  //     document.getElementById("typed-text").textContent = typedText.slice(
-  //       0,
-  //       -1
-  //     );
-  //     index--;
-  //     setTimeout(deleteText, 100);
-  //   } else {
-  //     index = 0;
-  //     setTimeout(typeText, 500);
-  //   }
-  // }
-
-  // useEffect(() => {
-  //   typeText();
-  // });
-
-
-
+ 
   useEffect(() => {
     async function fetchData() {
       const resp = await axios
-        .get('api/')
+        .get('http://localhost:5000/')
         .catch((err) => console.log(err));
       setData(resp.data);
     }
     fetchData();
   }, [setData]);
-
-  console.log(data)
 
 
   return (
@@ -164,53 +121,55 @@ function App() {
             <div className="column right">
               <div className="bars">
                 <div className="info">
-                  <span>HTML</span>
-                  <span>90%</span>
-                </div>
-                <div className="line html"></div>
-              </div>
-              <div className="bars">
-                <div className="info">
-                  <span>CSS</span>
-                  <span>70%</span>
-                </div>
-                <div className="line css"></div>
-              </div>
-              <div className="bars">
-                <div className="info">
-                  <span>JavaScript</span>
-                  <span>45%</span>
-                </div>
-                <div className="line js"></div>
-              </div>
-              <div className="bars">
-                <div className="info">
-                  <span>PHP</span>
-                  <span>50%</span>
-                </div>
-                <div className="line php"></div>
-              </div>
-              <div className="bars">
-                <div className="info">
-                  <span>MySQL</span>
-                  <span>70%</span>
+                  <span>ReactJS</span>
+                  <span>80%</span>
                 </div>
                 <div className="line reactjs"></div>
               </div>
               <div className="bars">
                 <div className="info">
-                  <span>React Js</span>
-                  <span>60%</span>
+                  <span>NodeJS</span>
+                  <span>50%</span>
                 </div>
-                <div className="line laravel"></div>
+                <div className="line nodejs"></div>
+              </div>
+              <div className="bars">
+                <div className="info">
+                  <span>JavaScript</span>
+                  <span>70%</span>
+                </div>
+                <div className="line js"></div>
+              </div>
+              <div className="bars">
+                <div className="info">
+                  <span>MySQL</span>
+                  <span>85%</span>
+                </div>
+                <div className="line sql"></div>
               </div>
               <div className="bars">
                 <div className="info">
                   <span>Laravel</span>
                   <span>80%</span>
                 </div>
-                <div className="line mysql"></div>
+                <div className="line laravel"></div>
               </div>
+              <div className="bars">
+                <div className="info">
+                  <span>Tailwind CSS</span>
+                  <span>90%</span>
+                </div>
+                <div className="line css"></div>
+              </div>
+             
+              {/* <div className="bars">
+                <div className="info">
+                
+                  <span>Laravel</span>
+                  <span>80%</span>
+                </div>
+                <div className="line laravel"></div>
+              </div> */}
             </div>
           </div>
         </div>
