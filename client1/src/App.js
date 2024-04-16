@@ -45,17 +45,11 @@ function App() {
 
     })
 
-  const [data, setData] = useState([]);
- 
-  useEffect(() => {
-    async function fetchData() {
-      const resp = await axios
-        .get('http://localhost:5000/')
-        .catch((err) => console.log(err));
-      setData(resp.data);
-    }
-    fetchData();
-  }, [setData]);
+  const [data, setData] = useState([
+    {pro_images : "./images/cloud.png", pro_title:"Cloud Dashboard", site_link : "https://cloud.bitsathy.ac.in/"},
+    {pro_images : "./images/corsera.png", pro_title:"Online Course Site", site_link : "http://44.203.84.49/"},
+    {pro_images : "./images/portfolio.jpg", pro_title:"Portfolio Website", site_link : "https://rajkavin.vercel.app/"}
+  ]);
 
 
   return (
@@ -302,3 +296,5 @@ function App() {
 };
 
 export default App
+
+
